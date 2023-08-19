@@ -23,7 +23,6 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartButtonClick }) =>
 
     const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        // Perform search with searchTerm
         console.log('Searching for:', searchTerm);
     };
 
