@@ -59,8 +59,7 @@ const Home: React.FC = () => {
             <TopCategoriesSection />
             <BestDealsSection
                 bestDeals={bestDealsProducts}
-                addToCart={addToCart}
-                cartItems={cartItems}
+                addToCart={addToCart} cartItems={[]}
             />
             <ProductCategorySection
                 categories={[

@@ -22,7 +22,7 @@ const ProductCategorySection: React.FC<ProductCategorySectionProps> = ({
     addToCart,
     activeCategory,
     handleCategoryChange,
-    cartItems, // Add cartItems as a prop
+    // cartItems, // Add cartItems as a prop
 }) => {
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 

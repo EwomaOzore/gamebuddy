@@ -10,12 +10,6 @@ interface BestDealsSectionProps {
     addToCart: (product: Product) => void;
 }
 
-const addToCart = (product: Product) => {
-    console.log('Adding to cart:', product);
-    // ... rest of your code
-};
-
-
 const BestDealsSection: React.FC<BestDealsSectionProps> = ({ bestDeals, addToCart, cartItems }) => {
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
