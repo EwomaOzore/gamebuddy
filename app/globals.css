@@ -2,26 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #f1f1f1;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.bg-headerColor {
+  position: fixed;
+  width: 100%;
+  background-color: #272829;
+}
+
+.category-link {
+  display: flex;
+  flex-grow: 1;
+}
+
+.scroll-container {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #f1f1f1;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 3px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 640px) {
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  .w-64 {
+    width: 100%;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+  .show-on-mobile {
+    display: block;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .show-on-mobile,
+  .hide-on-mobile {
+    text-align: center;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.cart-count-badge {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
 }
