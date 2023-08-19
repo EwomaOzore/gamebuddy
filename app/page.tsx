@@ -85,11 +85,11 @@ const Home: React.FC = () => {
             <ServicesSection />
             <Footer />
             <SecondaryFooter />
-            {showCart && (
+            {/* {showCart && (
                 <div className="fixed top-8 right-8 z-10">
                     <Cart cartItems={cartItems} onRemoveFromCart={removeFromCart} />
                 </div>
-            )}
+            )} */}
 
         </div>
     );
