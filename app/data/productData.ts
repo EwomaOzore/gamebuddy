@@ -3,50 +3,56 @@ export interface Product {
     id: number;
     name: string;
     imageSrc: string;
+    quantity: number;
     details: string;
     stars: number;
     price: number;
 }
 
-export const bestDealsProducts: Product[] = [
+export const bestDealsProducts = [
     {
         id: 1,
         imageSrc: '/images-playstation/ps4.jpg',
-        name: 'PS 4',
+        name: 'PlayStation 4',
         details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         stars: 4.5,
+        quantity: 1,
         price: 264355,
     },
     {
         id: 2,
         imageSrc: '/images-playstation/ps5.jpg',
-        name: 'PS 5',
+        name: 'PlayStation 5',
         details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         stars: 4.5,
-        price: 485317,
+        quantity: 1,
+        "price": 485317,
     },
     {
         id: 3,
         imageSrc: '/images-xbox/xboxone.jpg',
-        name: 'XBOX ONE',
+        name: 'Xbox One',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 194015,
     },
     {
         id: 4,
         imageSrc: '/images-xbox/xboxseriesx.jpg',
-        name: 'XBOX SERIEX X',
+        name: 'Xbox Series X',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 463766,
     },
     {
         id: 5,
         imageSrc: '/images-xbox/xboxseriess.jpg',
-        name: 'XBOX Series S',
+        name: 'Xbox Series S',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 463766,
     },
     {
@@ -55,6 +61,7 @@ export const bestDealsProducts: Product[] = [
         name: 'Nintendo Switch',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.7,
+        quantity: 1,
         price: 385317,
     },
     {
@@ -63,6 +70,7 @@ export const bestDealsProducts: Product[] = [
         name: 'Nintendo Switch Lite',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.7,
+        quantity: 1,
         price: 385317,
     },
     {
@@ -71,6 +79,7 @@ export const bestDealsProducts: Product[] = [
         name: 'Monitor',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 598899,
     },
     {
@@ -79,50 +88,56 @@ export const bestDealsProducts: Product[] = [
         name: 'Steam Deck',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 598899,
     },
 ];
 
 
-export const playstationProducts: Product[] = [
+export const playstationProducts = [
     {
         id: 1,
         imageSrc: '/images-playstation/ps4.jpg',
-        name: 'PS 4',
+        name: 'PlayStation 4',
         details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         stars: 4.5,
+        quantity: 1,
         price: 264355,
     },
     {
         id: 2,
         imageSrc: '/images-playstation/ps5.jpg',
-        name: 'PS 5',
+        name: 'PlayStation 5',
         details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         stars: 4.5,
+        quantity: 1,
         price: 485317,
     },
     {
         id: 3,
         imageSrc: '/images-playstation/psvita.jpg',
-        name: 'PS VITA',
+        name: 'PlayStation Vita',
         details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         stars: 4.5,
+        quantity: 1,
         price: 108694,
     },
     {
         id: 4,
         imageSrc: '/images-playstation/ps4pad.jpg',
-        name: 'PS 4 Controller',
+        name: 'PlayStation 4 Controller',
         details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         stars: 4.5,
+        quantity: 1,
         price: 108694,
     },
     {
         id: 5,
         imageSrc: '/images-playstation/ps5pad.jpg',
-        name: 'PS 5 Controller',
+        name: 'PlayStation 5 Controller',
         details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         stars: 4.5,
+        quantity: 1,
         price: 108694,
     },
     {
@@ -131,62 +146,69 @@ export const playstationProducts: Product[] = [
         name: 'Charging Station',
         details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         stars: 4.5,
+        quantity: 1,
         price: 108694,
     },
     // Add more PlayStation products as needed
 ];
 
-export const xboxProducts: Product[] = [
+export const xboxProducts = [
     {
         id: 1,
         imageSrc: '/images-xbox/xboxone.jpg',
-        name: 'XBOX ONE',
+        name: 'Xbox One',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 194015,
     },
     {
         id: 2,
         imageSrc: '/images-xbox/xboxseriesx.jpg',
-        name: 'XBOX SERIEX X',
+        name: 'Xbox Series X',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 463766,
     },
     {
         id: 3,
         imageSrc: '/images-xbox/xboxpad.jpg',
-        name: 'XBOX Controller',
+        name: 'Xbox Controller',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 463766,
     },
     {
         id: 4,
         imageSrc: '/images-xbox/xboxseriesxpad.jpg',
-        name: 'XBOX Series X Controller',
+        name: 'Xbox Series X Controller',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 463766,
     },
     {
         id: 5,
         imageSrc: '/images-xbox/xboxseriess.jpg',
-        name: 'XBOX Series S',
+        name: 'Xbox Series S',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 463766,
     },
     // Add more Xbox products as needed
 ];
 
-export const nintendoProducts: Product[] = [
+export const nintendoProducts = [
     {
         id: 1,
         imageSrc: '/images-nintendo/nintendoswitch.jpg',
         name: 'Nintendo Switch',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.7,
+        quantity: 1,
         price: 385317,
     },
     {
@@ -195,6 +217,7 @@ export const nintendoProducts: Product[] = [
         name: 'Nintendo Switch Lite',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.7,
+        quantity: 1,
         price: 385317,
     },
     {
@@ -203,6 +226,7 @@ export const nintendoProducts: Product[] = [
         name: 'Joy Con',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.7,
+        quantity: 1,
         price: 385317,
     },
     {
@@ -211,6 +235,7 @@ export const nintendoProducts: Product[] = [
         name: 'Nintendo Switch Pro Controller',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.7,
+        quantity: 1,
         price: 385317,
     },
     {
@@ -219,18 +244,20 @@ export const nintendoProducts: Product[] = [
         name: 'PowerA Controller Charging Base',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.7,
+        quantity: 1,
         price: 385317,
     },
     // Add more Nintendo products as needed
 ];
 
-export const pcProducts: Product[] = [
+export const pcProducts = [
     {
         id: 1,
         imageSrc: '/images-pc/keyboard.jpg',
         name: 'Gaming Keyboard',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 598899,
     },
     {
@@ -239,6 +266,7 @@ export const pcProducts: Product[] = [
         name: 'Monitor',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 598899,
     },
     {
@@ -247,6 +275,7 @@ export const pcProducts: Product[] = [
         name: 'Gaming Mouse',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 598899,
     },
     {
@@ -255,18 +284,20 @@ export const pcProducts: Product[] = [
         name: 'Speakers',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 598899,
     },
     // Add more Nintendo products as needed
 ];
 
-export const steamdeckProducts: Product[] = [
+export const steamdeckProducts = [
     {
         id: 1,
         imageSrc: '/images-steamdeck/steamdeck.jpg',
         name: 'Steam Deck',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 598899,
     },
     {
@@ -275,6 +306,7 @@ export const steamdeckProducts: Product[] = [
         name: 'Steam Deck Charger',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 598899,
     },
     {
@@ -283,12 +315,13 @@ export const steamdeckProducts: Product[] = [
         name: 'Steam Deck Dock Station',
         details: 'Pellentesque in ipsum id orci porta dapibus.',
         stars: 4.8,
+        quantity: 1,
         price: 598899,
     },
     // Add more Steam Deck products as needed
 ];
 
-export const allProducts: Product[] = [
+export const allProducts = [
     ...playstationProducts,
     ...pcProducts,
     ...xboxProducts,

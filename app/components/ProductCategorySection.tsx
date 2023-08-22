@@ -11,6 +11,7 @@ interface ProductCategory {
 interface ProductCategorySectionProps {
     categories: ProductCategory[];
     productsData: Record<string, Product[]>;
+    cartItems: { product: Product; quantity: number }[]; // Add cartItems as a prop
     addToCart: (product: Product) => void;
     activeCategory: string;
     handleCategoryChange: (categoryId: string) => void;
@@ -19,18 +20,18 @@ interface ProductCategorySectionProps {
 const ProductCategorySection: React.FC<ProductCategorySectionProps> = ({
     categories,
     productsData,
+    cartItems,
     addToCart,
     activeCategory,
     handleCategoryChange,
-    // cartItems, // Add cartItems as a prop
 }) => {
+
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
     const handleProductClick = (product: Product) => {
+        console.log('Adding to cart:', product);
         setSelectedProduct(product);
-    };
-    const handleCloseProductPage = () => {
-        setSelectedProduct(null);
+        addToCart(product);
     };
 
     return (
@@ -60,7 +61,7 @@ const ProductCategorySection: React.FC<ProductCategorySectionProps> = ({
                             <button
                                 className="mt-2 mr-2 p-2 rounded-full bg-green-500 text-white hover:bg-green-400"
                                 title="Add to Cart"
-                                onClick={() => addToCart(product)}
+                            // onClick={() => addToCart(product)}
                             >
                                 <FaShoppingCart />
                             </button>

@@ -2,29 +2,24 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { cartState } from '../atoms/cartState'
+import { useRecoilState } from 'recoil'
 import { FaUser, FaShoppingCart, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 
-interface HeaderProps {
-    cartItemsCount: number;
-    onCartButtonClick: () => void;
-}
+type CartItem = {
+    id: number;
+    // Other properties
+};
 
-const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartButtonClick }) => {
+const Header = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('');
+
+    const [cartItem, setCartItem] = useRecoilState(cartState);
 
     const handleMobileMenuToggle = () => {
         setShowMobileMenu(!showMobileMenu);
     };
 
-    const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchTerm(event.target.value);
-    };
-
-    const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        console.log('Searching for:', searchTerm);
-    };
 
     return (
         <header className="bg-headerColor text-white p-4 flex flex-col md:flex-row items-center justify-between z-1000">
@@ -41,13 +36,11 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartButtonClick }) =>
                 <button className="text-lg font-semibold hover:text-gray-300 transition">What's New</button>
             </div>
 
-            <form className={`relative md:ml-4 mt-4 md:mt-0 ${showMobileMenu ? 'block md:hidden' : 'hidden md:block'}`} onSubmit={handleSearchSubmit}>
+            <form className={`relative md:ml-4 mt-4 md:mt-0 ${showMobileMenu ? 'block md:hidden' : 'hidden md:block'}`}>
                 <input
                     type="text"
                     className="pl-10 pr-4 py-2 text-black border rounded-md focus:outline-none focus:border-blue-300"
                     placeholder="Search"
-                    value={searchTerm}
-                    onChange={handleSearchChange}
                 />
                 <div className="absolute top-3 left-3">
                     <FaSearch className="text-gray-500 text-xl" />
@@ -62,12 +55,8 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartButtonClick }) =>
                         </button>
 
                         <Link href='/cart'>
-                            <button className="relative text-lg font-semibold hover:text-gray-300 transition flex items-center">
-                                <div className="relative">
-                                    <FaShoppingCart className="text-xl ml-4" />
-                                    <span className="cart-count-badge">{cartItemsCount}</span>
-                                </div>
-                            </button>
+                            <FaShoppingCart className="text-xl ml-4" />
+                            <span className='cart-count-badge'>{cartItem.length}</span>
                         </Link>
                     </div>
                 </div>
