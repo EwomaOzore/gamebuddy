@@ -73,6 +73,13 @@ body::-webkit-scrollbar-track {
   .hide-on-mobile {
     text-align: center;
   }
+  .gap-4 {
+    width: 90%;
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .cart-count-badge {
